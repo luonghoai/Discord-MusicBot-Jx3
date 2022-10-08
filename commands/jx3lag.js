@@ -45,10 +45,10 @@ module.exports = {
           let embed = new MessageEmbed()
             .setAuthor(`Tên tâm pháp: ${cmd}`, client.botconfig.IconURL)
             .setColor("GREEN")
-            .addField("Tăng cường thực phẩm:", `${data.heighten_food}`, true)
-            .addField("Phụ trợ thực phẩm:", `${data.auxiliary_food}`, true)
-            .addField("Tăng cường dược phẩm:", `${data.heighten_drug}`, true)
-            .addField("Phụ trợ dược phẩm:", `${data.auxiliary_drug}`, true);
+            .addField("Tăng cường thực phẩm:", `${data.heighten_food}`)
+            .addField("Phụ trợ thực phẩm:", `${data.auxiliary_food}`)
+            .addField("Tăng cường dược phẩm:", `${data.heighten_drug}`)
+            .addField("Phụ trợ dược phẩm:", `${data.auxiliary_drug}`);
           interaction.send(embed);
         } catch (err) {
           console.error(err);
@@ -106,10 +106,10 @@ module.exports = {
             let embed = new MessageEmbed()
               .setAuthor(`Tên tâm pháp: ${cmd}`, client.botconfig.IconURL)
               .setColor("GREEN")
-              .addField("Tăng cường thực phẩm:", `${data.heighten_food}`, true)
-              .addField("Phụ trợ thực phẩm:", `${data.auxiliary_food}`, true)
-              .addField("Tăng cường dược phẩm:", `${data.heighten_drug}`, true)
-              .addField("Phụ trợ dược phẩm:", `${data.auxiliary_drug}`, true);
+              .addField("Tăng cường thực phẩm:", `${data.heighten_food}`)
+              .addField("Phụ trợ thực phẩm:", `${data.auxiliary_food}`)
+              .addField("Tăng cường dược phẩm:", `${data.heighten_drug}`)
+              .addField("Phụ trợ dược phẩm:", `${data.auxiliary_drug}`);
             interaction.send(embed);
           } catch (err) {
             console.error(err);

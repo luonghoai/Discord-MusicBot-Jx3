@@ -6,7 +6,7 @@ module.exports = {
   SupportServer: "https://discord.gg/sbySMS7m3v", // Support Server Link
   Token:
     process.env.Token ||
-    "MTAyNzQzNDU2NTAyMDY4NDMyOA.GvC7Wp.FgEebhA3njIUbuaUS1DglGJvB6C8agDTxLn2TQ", // Discord Bot Token
+    "MTAyNzQzNDU2NTAyMDY4NDMyOA.GzuzzZ.sWdwAHO1a6udZNXhjk5Leq_GgZHN2WamQiaZS4", // Discord Bot Token
   ClientID: process.env.Discord_ClientID || "1027434565020684328", // Discord Client ID
   ClientSecret:
     process.env.Discord_ClientSecret || "_Bl6Brw_T9w0HLwSYKGTusgjO-KI7j6o", // Discord Client Secret
@@ -17,10 +17,10 @@ module.exports = {
   "24/7": false, // Make the bot stays in VC 24/7 (when you reboot the bot will **not** automatically rejoin.)
   CookieSecret: "Pikachu is cute", // A cookie for you, cookie for me. make sure you change this value!
   IconURL:
-    "https://raw.githubusercontent.com/SudhanPlayz/Discord-MusicBot/master/assets/logo.gif", // URL of all embed author icons | Dont edit unless you dont need that Music CD Spining
+    "https://i.pinimg.com/originals/ab/c3/93/abc393367c3f19e1f0778813d78a0427.gif", // URL of all embed author icons | Dont edit unless you dont need that Music CD Spining
   EmbedColor: "RANDOM", // Color of most embeds | Custom Hex value are supported. I.e: "#36393F"
   Permissions: 2205281600, // Bot Inviting Permissions
-  Website: process.env.Website || "http://127.0.0.1/", // Website where it is hosted at includes http or https || Use "0.0.0.0" if you using Heroku || Do not include /api/callback. Just the website url. I.e. "https://foo.bar"
+  Website: process.env.Website || "0.0.0.0", // Website where it is hosted at includes http or https || Use "0.0.0.0" if you using Heroku || Do not include /api/callback. Just the website url. I.e. "https://foo.bar"
   // If you get invalid oauth, make sure on the discord developer page you set the oauth url to something like: https://example.com/api/callback.
 
   Presence: {

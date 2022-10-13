@@ -52,7 +52,7 @@ module.exports = {
             .addField("Điều kiện cần để xuất phát kỳ ngộ:", `${data.require}`)
             .addField("Điều kiện bổ sung:", `${data.maybe}`)
             .addField("Phần thưởng:", `${data.reward}`)
-            .setImage(`${data.upload}`);
+            .setImage(`${data.url}`);
           interaction.send(embed);
         } catch (err) {
           console.error(err);
@@ -114,7 +114,7 @@ module.exports = {
               .addField("Điều kiện cần để xuất phát kỳ ngộ:", `${data.require}`)
               .addField("Điều kiện bổ sung:", `${data.maybe}`)
               .addField("Phần thưởng:", `${data.reward}`)
-              .setImage(`${data.upload}`);
+              .setImage(`${data.url}`);
             interaction.send(embed);
           } catch (err) {
             console.error(err);

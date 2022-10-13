@@ -39,7 +39,7 @@ module.exports = {
       const sendPostRequest = async (interaction) => {
         try {
           const resp = await axios.post(
-            "https://api.jx3api.com/app/furniture",
+            "https://www.jx3api.com/data/home/furniture",
             {
               name: `${cmd}`,
             }
@@ -99,7 +99,7 @@ module.exports = {
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(
-              "https://api.jx3api.com/app/furniture",
+              "https://www.jx3api.com/data/home/furniture",
               {
                 name: `${cmd}`,
               }

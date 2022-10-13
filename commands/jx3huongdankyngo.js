@@ -38,9 +38,12 @@ module.exports = {
 
       const sendPostRequest = async (interaction) => {
         try {
-          const resp = await axios.post("https://api.jx3api.com/app/strategy", {
-            name: `${cmd}`,
-          });
+          const resp = await axios.post(
+            "https://www.jx3api.com/data/lucky/sub/strategy",
+            {
+              name: `${cmd}`,
+            }
+          );
           const data = resp.data.data;
           let embed = new MessageEmbed()
             .setAuthor(`Tên kỳ ngộ: ${cmd}`, client.botconfig.IconURL)
@@ -96,7 +99,7 @@ module.exports = {
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(
-              "https://api.jx3api.com/app/strategy",
+              "https://www.jx3api.com/data/lucky/sub/strategy",
               {
                 name: `${cmd}`,
               }

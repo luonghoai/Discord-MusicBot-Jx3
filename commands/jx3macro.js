@@ -40,7 +40,7 @@ module.exports = {
       const sendPostRequest = async (interaction) => {
         try {
           const resp = await axios.post(
-            "https://api.jx3api.com/app/macro",
+            "https://www.jx3api.com/data/school/macro",
             data
           );
           const macro = resp.data.data;
@@ -98,7 +98,7 @@ module.exports = {
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(
-              "https://api.jx3api.com/app/macro",
+              "https://www.jx3api.com/data/school/macro",
               data
             );
             const macro = resp.data.data;

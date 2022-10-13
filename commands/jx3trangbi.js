@@ -38,9 +38,12 @@ module.exports = {
 
       const sendPostRequest = async (interaction) => {
         try {
-          const resp = await axios.post("https://api.jx3api.com/app/equip", {
-            name: `${cmd}`,
-          });
+          const resp = await axios.post(
+            "https://www.jx3api.com/data/school/equip",
+            {
+              name: `${cmd}`,
+            }
+          );
           const data = resp.data.data;
           let embed = new MessageEmbed()
             .setAuthor(`Trang bị: ${cmd}`, client.botconfig.IconURL)
@@ -95,9 +98,12 @@ module.exports = {
 
         const sendPostRequest = async (interaction) => {
           try {
-            const resp = await axios.post("https://api.jx3api.com/app/equip", {
-              name: `${cmd}`,
-            });
+            const resp = await axios.post(
+              "https://www.jx3api.com/data/school/equip",
+              {
+                name: `${cmd}`,
+              }
+            );
             const data = resp.data.data;
             let embed = new MessageEmbed()
               .setAuthor(`Trang bị: ${cmd}`, client.botconfig.IconURL)

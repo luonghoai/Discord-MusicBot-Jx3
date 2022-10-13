@@ -38,9 +38,12 @@ module.exports = {
 
       const sendPostRequest = async (interaction) => {
         try {
-          const resp = await axios.post("https://api.jx3api.com/app/heighten", {
-            name: `${cmd}`,
-          });
+          const resp = await axios.post(
+            "https://www.jx3api.com/data/school/snacks",
+            {
+              name: `${cmd}`,
+            }
+          );
           const data = resp.data.data;
           let embed = new MessageEmbed()
             .setAuthor(`Tên tâm pháp: ${cmd}`, client.botconfig.IconURL)
@@ -97,7 +100,7 @@ module.exports = {
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(
-              "https://api.jx3api.com/app/heighten",
+              "https://www.jx3api.com/data/school/snacks",
               {
                 name: `${cmd}`,
               }

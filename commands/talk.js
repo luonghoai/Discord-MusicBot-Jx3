@@ -95,13 +95,10 @@ module.exports = {
           );
           const dispatcher = connection.play(broadcast);
           dispatcher.on("end", (end) => {
-            client.sendTime(
-                interaction,
-                "❌ | **Nói xong rồi, out nha!!!**"
-              );
+            client.sendTime(interaction, "❌ | **Nói xong rồi, out nha!!!**");
+            channel.leave();
           });
         });
-        channel.leave();
       } catch (err) {
         console.log(err);
       }

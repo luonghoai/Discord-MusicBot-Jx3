@@ -85,7 +85,7 @@ module.exports = {
         if (!cmd)
           return client.sendTime(interaction, `❌ | Nói gì đó dơ bửn đi :">`);
         const broadcast = client.voice.createBroadcast();
-        const channelId = msg.member.voice.channelID;
+        const channelId = member.voice.channelID;
         const channel = client.channels.cache.get(channelId);
         channel.join().then((connection) => {
           broadcast.play(discordTTS.getVoiceStream(cmd));

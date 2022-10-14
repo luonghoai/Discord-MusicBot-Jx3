@@ -64,19 +64,21 @@ module.exports = {
      * @param {string[]} args
      * @param {*} param3
      */
-    run: async (client, message, args, { GuildDB }) => {
+    run: async (client, interaction, args, { GuildDB }) => {
       try {
-        if (!message.member.voice.channel)
+        const guild = client.guilds.cache.get(interaction.guild_id);
+        const member = guild.members.cache.get(interaction.member.user.id);
+        if (!member.voice.channel)
           return client.sendTime(
-            message.channel,
+            interaction,
             "❌ | **Vào room đi rồi hẵn buông lời dơ bửn!!!**"
           );
         if (
-          message.guild.me.voice.channel &&
-          message.member.voice.channel.id !== message.guild.me.voice.channel.id
+          guild.me.voice.channel &&
+          !guild.me.voice.channel.equals(member.voice.channel)
         )
           return client.sendTime(
-            message.channel,
+            interaction,
             "❌ | **Vào room đi rồi hẵn buông lời dơ bửn!!!**"
           );
         let cmd = args[0].value;

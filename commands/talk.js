@@ -86,22 +86,22 @@ module.exports = {
         let cmd = args[0].value;
         if (!cmd)
           return client.sendTime(interaction, `❌ | Nói gì đó dơ bửn đi :">`);
-        const broadcast = client.voice.createBroadcast();
+        // const broadcast = client.voice.createBroadcast();
         const channelId = member.voice.channelID;
         const channel = client.channels.cache.get(channelId);
         channel.join().then((connection) => {
-          broadcast.play(
+          //   broadcast.play(
+          //     discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
+          //   );
+          const dispatcher = connection.playStream(
             discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
           );
-          const dispatcher = connection.play(broadcast);
-          dispatcher.on("speaking", (speaking) => {
-            if (!speaking) {
-              channel.leave();
-              return client.sendTime(
-                interaction,
-                "❌ | **Nói xong rồi, out nha!!!**"
-              );
-            }
+          dispatcher.on("end", () => {
+            channel.leave();
+            return client.sendTime(
+              interaction,
+              "❌ | **Nói xong rồi, out nha!!!**"
+            );
           });
         });
       } catch (err) {

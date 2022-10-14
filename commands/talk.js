@@ -94,6 +94,9 @@ module.exports = {
             discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
           );
           const dispatcher = connection.play(broadcast);
+          dispatcher.on("end", (end) => {
+            channel.leave();
+          });
         });
       } catch (err) {
         console.log(err);

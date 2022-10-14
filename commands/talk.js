@@ -93,9 +93,7 @@ module.exports = {
             discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
           );
           dispatcher.on("finish", () => {
-            client.sendTime(interaction, "❌ | **Nói xong rồi, out nha!!!**");
             channel.leave();
-            return;
           });
         });
       } catch (err) {

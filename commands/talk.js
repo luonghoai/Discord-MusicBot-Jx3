@@ -101,7 +101,7 @@ module.exports = {
           .then(() => {
             return client.sendTime(
               interaction,
-              "❌ | **Nói xong ròi out nha!!!**"
+              `❌ | ${cmd} |**Nói xong ròi out nha!!!**`
             );
           });
       } catch (err) {

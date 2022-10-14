@@ -39,7 +39,9 @@ module.exports = {
       const channelId = msg.member.voice.channelID;
       const channel = client.channels.cache.get(channelId);
       channel.join().then((connection) => {
-        broadcast.play(discordTTS.getVoiceStream(cmd, {lang: 'vi', slow: false}));
+        broadcast.play(
+          discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
+        );
         const dispatcher = connection.play(broadcast);
       });
     } catch (err) {
@@ -88,7 +90,9 @@ module.exports = {
         const channelId = member.voice.channelID;
         const channel = client.channels.cache.get(channelId);
         channel.join().then((connection) => {
-          broadcast.play(discordTTS.getVoiceStream(cmd));
+          broadcast.play(
+            discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
+          );
           const dispatcher = connection.play(broadcast);
         });
       } catch (err) {

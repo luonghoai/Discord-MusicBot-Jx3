@@ -93,9 +93,8 @@ module.exports = {
           //   broadcast.play(
           //     discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
           //   );
-          const dispatcher = connection.playStream(
-            discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
-          );
+          var audio = discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false });
+          const dispatcher = connection.playStream(audio);
           dispatcher.on("end", () => {
             channel.leave();
             return client.sendTime(

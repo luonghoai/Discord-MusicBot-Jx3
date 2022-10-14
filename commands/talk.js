@@ -64,7 +64,7 @@ module.exports = {
      * @param {string[]} args
      * @param {*} param3
      */
-    run: async (client, interaction, args, { GuildDB }) => {
+    run: async (client, message, args, { GuildDB }) => {
       try {
         if (!message.member.voice.channel)
           return client.sendTime(

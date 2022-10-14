@@ -88,14 +88,22 @@ module.exports = {
           return client.sendTime(interaction, `❌ | Nói gì đó dơ bửn đi :">`);
         const channelId = member.voice.channelID;
         const channel = client.channels.cache.get(channelId);
-        channel.join().then((connection) => {
-          const dispatcher = connection.play(
-            discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
-          );
-          dispatcher.on("finish", () => {
-            channel.leave();
+        channel
+          .join()
+          .then((connection) => {
+            const dispatcher = connection.play(
+              discordTTS.getVoiceStream(cmd, { lang: "vi", slow: false })
+            );
+            dispatcher.on("finish", () => {
+              channel.leave();
+            });
+          })
+          .then(() => {
+            return client.sendTime(
+              interaction,
+              "❌ | **Nói xong ròi out nha!!!**"
+            );
           });
-        });
       } catch (err) {
         console.log(err);
       }

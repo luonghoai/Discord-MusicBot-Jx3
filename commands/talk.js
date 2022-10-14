@@ -95,9 +95,13 @@ module.exports = {
           );
           const dispatcher = connection.play(broadcast);
           dispatcher.on("end", (end) => {
-            channel.leave();
+            client.sendTime(
+                interaction,
+                "❌ | **Nói xong rồi, out nha!!!**"
+              );
           });
         });
+        channel.leave();
       } catch (err) {
         console.log(err);
       }

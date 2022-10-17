@@ -199,10 +199,13 @@ class DiscordMusicBot extends Client {
             .join()
             .then((connection) => {
               const dispatcher = connection.play(
-                discordTTS.getVoiceStream(`Hê Lô ${oldState.member.nickname} `, {
-                  lang: "vi",
-                  slow: false,
-                })
+                discordTTS.getVoiceStream(
+                  `Hê Lô ${oldState.member.nickname} `,
+                  {
+                    lang: "vi",
+                    slow: false,
+                  }
+                )
               );
               dispatcher.on("finish", () => {
                 let msg = new MessageEmbed();
@@ -211,9 +214,11 @@ class DiscordMusicBot extends Client {
                 msg.setDescription(
                   `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
                 );
-                this.channels.cache.get("493378277482954771").send(msg);
-                channel.leave();
+                channel.send(msg);
               });
+            })
+            .then(() => {
+              channel.leave();
             });
         }
       }

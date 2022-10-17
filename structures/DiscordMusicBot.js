@@ -202,19 +202,16 @@ class DiscordMusicBot extends Client {
                 slow: false,
               })
             );
-            dispatcher
-              .on("finish", () => {
-                let msg = new MessageEmbed();
-                msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
-                msg.setColor(client.botconfig.EmbedColor);
-                msg.setDescription(
-                  `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
-                );
-                client.channels.cache.get(channelId).send(msg);
-              })
-              .then(() => {
-                channel.leave();
-              });
+            dispatcher.on("finish", () => {
+              let msg = new MessageEmbed();
+              msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
+              msg.setColor(client.botconfig.EmbedColor);
+              msg.setDescription(
+                `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
+              );
+              client.channels.cache.get(channelId).send(msg);
+              channel.leave();
+            });
           });
         }
       }

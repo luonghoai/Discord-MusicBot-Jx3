@@ -215,10 +215,8 @@ class DiscordMusicBot extends Client {
                   `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
                 );
                 channel.send(msg);
+                channel.leave();
               });
-            })
-            .then(() => {
-              channel.leave();
             });
         }
       }

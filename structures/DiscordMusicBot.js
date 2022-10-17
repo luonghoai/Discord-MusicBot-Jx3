@@ -195,19 +195,15 @@ class DiscordMusicBot extends Client {
         const channelId = newState.channelID;
         if (channelId) {
           const channel = client.channels.cache.get(channelId);
-          channel
-            .join()
-            .then((connection) => {
-              const dispatcher = connection.play(
-                discordTTS.getVoiceStream(
-                  `Hê Lô ${oldState.member.nickname} `,
-                  {
-                    lang: "vi",
-                    slow: false,
-                  }
-                )
-              );
-              dispatcher.on("finish", () => {
+          channel.join().then((connection) => {
+            const dispatcher = connection.play(
+              discordTTS.getVoiceStream(`Hê Lô ${oldState.member.nickname} `, {
+                lang: "vi",
+                slow: false,
+              })
+            );
+            dispatcher
+              .on("finish", () => {
                 let msg = new MessageEmbed();
                 msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
                 msg.setColor(client.botconfig.EmbedColor);
@@ -215,11 +211,11 @@ class DiscordMusicBot extends Client {
                   `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
                 );
                 channel.leave();
+              })
+              .then(() => {
+                client.channels.cache.get(channelId).send(msg);
               });
-            })
-            .then(() => {
-              client.channels.cache.get(channelId).send(msg);
-            });
+          });
         }
       }
     });

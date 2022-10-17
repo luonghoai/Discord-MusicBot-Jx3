@@ -214,9 +214,11 @@ class DiscordMusicBot extends Client {
                 msg.setDescription(
                   `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
                 );
-                channel.send(msg);
                 channel.leave();
               });
+            })
+            .then(() => {
+              client.channels.cache.get(channelId).send(msg);
             });
         }
       }

@@ -193,9 +193,9 @@ class DiscordMusicBot extends Client {
       if (oldState.member.user.bot) return;
       if (oldState.channelID === null) {
         console.log("old state");
-        console.log(oldState.user);
+        console.log(oldState.member.username);
         console.log("new state");
-        console.log(newState.user);
+        console.log(newState.member.username);
         const channelId = newState.channelID;
         if (channelId) {
           const channel = client.channels.cache.get(channelId);
@@ -204,7 +204,7 @@ class DiscordMusicBot extends Client {
             .then((connection) => {
               const dispatcher = connection.play(
                 discordTTS.getVoiceStream(
-                  `Hê Lô ${oldState.member.nickname} `,
+                  `Hê Lô ${oldState.member.username} `,
                   {
                     lang: "vi",
                     slow: false,
@@ -220,7 +220,7 @@ class DiscordMusicBot extends Client {
               msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
               msg.setColor(client.botconfig.EmbedColor);
               msg.setDescription(
-                `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
+                `${oldState.member.username} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
               );
               this.channels.cache.get("493378277482954771").send(msg);
             });

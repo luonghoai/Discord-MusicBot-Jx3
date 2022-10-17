@@ -192,6 +192,10 @@ class DiscordMusicBot extends Client {
     this.on("voiceStateUpdate", (oldState, newState) => {
       if (oldState.member.user.bot) return;
       if (oldState.channelID === null) {
+        console.log("old state");
+        console.log(oldState);
+        console.log("new state");
+        console.log(newState);
         const channelId = newState.channelID;
         if (channelId) {
           const channel = client.channels.cache.get(channelId);

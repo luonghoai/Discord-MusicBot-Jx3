@@ -199,7 +199,7 @@ class DiscordMusicBot extends Client {
             .join()
             .then((connection) => {
               const dispatcher = connection.play(
-                discordTTS.getVoiceStream(`Hê Lô ${oldState.user.nickname} `, {
+                discordTTS.getVoiceStream(`Hê Lô ${oldState.member.nickname} `, {
                   lang: "vi",
                   slow: false,
                 })
@@ -209,7 +209,7 @@ class DiscordMusicBot extends Client {
                 msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
                 msg.setColor(client.botconfig.EmbedColor);
                 msg.setDescription(
-                  `${oldState.user.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
+                  `${oldState.member.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
                 );
                 this.channels.cache.get("493378277482954771").send(msg);
                 channel.leave();

@@ -187,6 +187,20 @@ class DiscordMusicBot extends Client {
         client.channels.cache.get(player.textChannel).send(QueueEmbed);
         if (!this.botconfig["24/7"]) player.destroy();
       });
+
+    this.on("voiceStateUpdate", (oldState, newState) => {
+      if (oldState.member.user.bot) return;
+      if (oldState.channelID === null) {
+        console.log(oldState);
+        let msg = new MessageEmbed();
+        msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
+        msg.setColor(client.botconfig.EmbedColor);
+        msg.setDescription(
+          `${oldState.member.nickname} Ăn hành vui vẻ nha`
+        );
+        this.channels.cache.get("493378277482954771").send(msg);
+      }
+    });
   }
 
   LoadCommands() {

@@ -12,6 +12,7 @@ const prettyMilliseconds = require("pretty-ms");
 const deezer = require("erela.js-deezer");
 const apple = require("erela.js-apple");
 const facebook = require("erela.js-facebook");
+const discordTTS = require("discord-tts");
 
 //Class extending Stuff
 require("discordjs-activity"); //Epic Package, For more details: https://www.npmjs.com/package/discordjs-activity
@@ -191,14 +192,30 @@ class DiscordMusicBot extends Client {
     this.on("voiceStateUpdate", (oldState, newState) => {
       if (oldState.member.user.bot) return;
       if (oldState.channelID === null) {
-        console.log(oldState);
-        let msg = new MessageEmbed();
-        msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
-        msg.setColor(client.botconfig.EmbedColor);
-        msg.setDescription(
-          `${oldState.member.nickname} Ăn hành vui vẻ nha`
-        );
-        this.channels.cache.get("493378277482954771").send(msg);
+        const channelId = newState.channelID;
+        if (channelId) {
+          const channel = client.channels.cache.get(channelId);
+          channel
+            .join()
+            .then((connection) => {
+              const dispatcher = connection.play(
+                discordTTS.getVoiceStream(`Hê Lô ${oldState.user.nickname} `, {
+                  lang: "vi",
+                  slow: false,
+                })
+              );
+              dispatcher.on("finish", () => {
+                let msg = new MessageEmbed();
+                msg.setAuthor(`Hế lô!!!!`, client.botconfig.IconURL);
+                msg.setColor(client.botconfig.EmbedColor);
+                msg.setDescription(
+                  `${oldState.user.nickname} ngày tốt lành, /help để được Hòi support nhiều hơn nhé!`
+                );
+                this.channels.cache.get("493378277482954771").send(msg);
+                channel.leave();
+              });
+            });
+        }
       }
     });
   }

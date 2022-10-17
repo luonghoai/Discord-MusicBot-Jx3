@@ -110,11 +110,6 @@ module.exports = {
           client.botconfig.IconURL
         )
         .setColor(client.botconfig.EmbedColor)
-        .setFooter(
-          `To get info of each command type ${
-            GuildDB ? GuildDB.prefix : client.botconfig.DefaultPrefix
-          }help [Command] | Have a nice day!`
-        )
         .setDescription(`${Commands.join("\n")}`);
       if (!args) return interaction.send(Embed);
       else {

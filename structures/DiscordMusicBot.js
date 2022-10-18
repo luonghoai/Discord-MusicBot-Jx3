@@ -194,9 +194,10 @@ class DiscordMusicBot extends Client {
       if (oldState.channelID === null) {
         const channelId = newState.channelID;
         let userName = oldState.member.nickname;
-        if (!userName) {
+        if (userName == null || userName == undefined) {
           userName = oldState.member.nickname; 
         }
+        console.log(oldState.member);
         if (channelId) {
           const channel = client.channels.cache.get(channelId);
           channel 

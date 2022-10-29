@@ -368,7 +368,8 @@ module.exports = {
               .setAuthor(`Macro: ${args[0].value}`, client.botconfig.IconURL)
               .setColor("GREEN")
               .addField("Macro:", `${macro.macro}`)
-              .addField("Kì huyệt:", `${macro.qixue}`);
+              .addField("Kì huyệt:", `${macro.qixue}`)
+              .setDescription(`Macro cho ${args[0].value} chỉ mang tính chất tham khảo`);
             interaction.send(embed);
           } catch (err) {
             console.error(err);

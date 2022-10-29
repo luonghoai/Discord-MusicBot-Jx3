@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { TrackUtils } = require("erela.js");
 const axios = require("axios");
 
 module.exports = {
@@ -88,8 +87,75 @@ module.exports = {
       if (!args) return interaction.send(Embed);
       else {
         let cmd = args[0].value;
+
         if (!cmd)
           return client.sendTime(interaction, `❌ | Không tìm thấy macro`);
+
+        switch (cmd.toLowerCase()) {
+          case "băng tâm" ||
+            "bang tam" ||
+            "that tu dps" ||
+            "7tu dame" ||
+            "7tu dps" ||
+            "thất tú dame" ||
+            "thất tú dps" ||
+            "that tu dame":
+            cmd = "冰心诀";
+            break;
+          case "vân thường" || "van thuong" || "that tu buff" || "7tu buff":
+            cmd = "云裳心经";
+            break;
+          case "hoa gian" ||
+            "hoa gian du" ||
+            "vạn hoa dame" ||
+            "vạn hoa dps" ||
+            "van hoa dame" ||
+            "van hoa dps":
+            cmd = "花间游";
+            break;
+          case "ly kinh" ||
+            "ly kinh dịch đạo" ||
+            "vạn hoa buff" ||
+            "van hoa buff":
+            cmd = "离经易道";
+            break;
+          case "độc kinh" ||
+            "ngũ độc dame" ||
+            "ngũ độc dps" ||
+            "ngu doc dame" ||
+            "ngu doc dps" ||
+            "5d dame" ||
+            "5d dps":
+            cmd = "毒经";
+            break;
+          case "bổ thiên quyết" ||
+            "bổ thiên" ||
+            "ngu doc buff" ||
+            "5d buff" ||
+            "ngũ độc buff":
+            cmd = "补天诀";
+            break;
+          case "mạc vấn" ||
+            "trường ca môn dame" ||
+            "trường ca dame" ||
+            "trường ca dps" ||
+            "truong ca mon dame" ||
+            "truong ca dame" ||
+            "truong ca dps" ||
+            "mac van":
+            cmd = "莫问";
+            break;
+          case "tương tri" ||
+            "trường ca môn buff" ||
+            "trường ca buff" ||
+            "truong ca mon buff" ||
+            "truong ca buff" ||
+            "tuong tri":
+            cmd = "相知";
+            break;
+          default:
+          // code block
+        }
 
         let data = {
           name: `${cmd}`,

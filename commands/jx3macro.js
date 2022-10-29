@@ -92,255 +92,261 @@ module.exports = {
           return client.sendTime(interaction, `❌ | Không tìm thấy macro`);
 
         switch (cmd.toLowerCase().trim()) {
-          case ("băng tâm" ||
-            "bang tam" ||
-            "that tu dps" ||
-            "7tu dame" ||
-            "7tu dps" ||
-            "thất tú dame" ||
-            "thất tú dps" ||
-            "that tu dame"):
+          case "băng tâm":
+          case "bang tam":
+          case "that tu dps":
+          case "7tu dame":
+          case "7tu dps":
+          case "thất tú dame":
+          case "thất tú dps":
+          case "that tu dame":
             cmd = "冰心诀";
             break;
-          case ("vân thường" || "van thuong" || "that tu buff" || "7tu buff"):
+          case "vân thường":
+          case "van thuong":
+          case "that tu buff":
+          case "7tu buff":
             cmd = "云裳心经";
             break;
-          case ("hoa gian" ||
-            "hoa gian du" ||
-            "vạn hoa dame" ||
-            "vạn hoa dps" ||
-            "van hoa dame" ||
-            "van hoa dps"):
+          case "hoa gian":
+          case "hoa gian du":
+          case "vạn hoa dame":
+          case "vạn hoa dps":
+          case "van hoa dame":
+          case "van hoa dps":
             cmd = "花间游";
             break;
-          case ("ly kinh" ||
-            "ly kinh dịch đạo" ||
-            "vạn hoa buff" ||
-            "van hoa buff"):
+          case "ly kinh":
+          case "ly kinh dịch đạo":
+          case "vạn hoa buff":
+          case "van hoa buff":
             cmd = "离经易道";
             break;
-          case ("độc kinh" ||
-            "ngũ độc dame" ||
-            "ngũ độc dps" ||
-            "ngu doc dame" ||
-            "ngu doc dps" ||
-            "5d dame" ||
-            "5d dps" ||
-            "doc kinh"):
+          case "độc kinh":
+          case "ngũ độc dame":
+          case "ngũ độc dps":
+          case "ngu doc dame":
+          case "ngu doc dps":
+          case "5d dame":
+          case "5d dps":
+          case "doc kinh":
             cmd = "毒经";
             break;
-          case ("bổ thiên quyết" ||
-            "bổ thiên" ||
-            "ngu doc buff" ||
-            "5d buff" ||
-            "ngũ độc buff"):
+          case "bổ thiên quyết":
+          case "bổ thiên":
+          case "ngu doc buff":
+          case "5d buff":
+          case "ngũ độc buff":
             cmd = "补天诀";
             break;
-          case ("mạc vấn" ||
-            "trường ca môn dame" ||
-            "trường ca dame" ||
-            "trường ca dps" ||
-            "truong ca mon dame" ||
-            "truong ca dame" ||
-            "truong ca dps" ||
-            "mac van"):
+          case "mạc vấn":
+          case "trường ca môn dame":
+          case "trường ca dame":
+          case "trường ca dps":
+          case "truong ca mon dame":
+          case "truong ca dame":
+          case "truong ca dps":
+          case "mac van":
             cmd = "莫问";
             break;
-          case ("tương tri" ||
-            "trường ca môn buff" ||
-            "trường ca buff" ||
-            "truong ca mon buff" ||
-            "truong ca buff" ||
-            "tuong tri"):
+          case "tương tri":
+          case "trường ca môn buff":
+          case "trường ca buff":
+          case "truong ca mon buff":
+          case "truong ca buff":
+          case "tuong tri":
             cmd = "相知";
             break;
-          case ("vô phương" ||
-            "vo phuong" ||
-            "duoc tong dame" ||
-            "dược tông dame" ||
-            "duoc tong dps" ||
-            "dược tông dps"):
+          case "vô phương":
+          case "vo phuong":
+          case "duoc tong dame":
+          case "dược tông dame":
+          case "duoc tong dps":
+          case "dược tông dps":
             cmd = "无方";
             break;
-          case ("linh tố" || "linh to" || "dược tông buff" || "duoc tong buff"):
+          case "linh tố":
+          case "linh to":
+          case "dược tông buff":
+          case "duoc tong buff":
             cmd = "灵素";
             break;
-          case ("ngạo huyết chiến ý" ||
-            "ngao huyet chien y" ||
-            "thien sach dame" ||
-            "thiên sách dame" ||
-            "thien sach dps" ||
-            "thiên sách dps"):
+          case "ngạo huyết chiến ý":
+          case "ngao huyet chien y":
+          case "thien sach dame":
+          case "thiên sách dame":
+          case "thien sach dps":
+          case "thiên sách dps":
             cmd = "傲血战意";
             break;
-          case ("thiết lao luật" ||
-            "thiet lao luat" ||
-            "thiên sách tank" ||
-            "thien sach tank"):
+          case "thiết lao luật":
+          case "thiet lao luat":
+          case "thiên sách tank":
+          case "thien sach tank":
             cmd = "铁牢律";
             break;
-          case ("dịch cân kinh" ||
-            "dich can kinh" ||
-            "thieu lam dame" ||
-            "thiếu lâm dame" ||
-            "thieu lam dps" ||
-            "thiếu lâm dps"):
+          case "dịch cân kinh":
+          case "dich can kinh":
+          case "thieu lam dame":
+          case "thiếu lâm dame":
+          case "thieu lam dps":
+          case "thiếu lâm dps":
             cmd = "易筋经";
             break;
-          case ("tẩy tủy kinh" ||
-            "tay tinh kinh" ||
-            "thiếu lâm tank" ||
-            "thieu lam tank"):
+          case "tẩy tủy kinh":
+          case "tay tinh kinh":
+          case "thiếu lâm tank":
+          case "thieu lam tank":
             cmd = "洗髓经";
             break;
-          case ("phần ảnh quyết" ||
-            "phan anh quyet" ||
-            "phan anh" ||
-            "phần ảnh" ||
-            "minh giáo dame" ||
-            "minh giao dame" ||
-            "minh giáo dps" ||
-            "minh giao dps"):
+          case "phần ảnh quyết":
+          case "phan anh quyet":
+          case "phan anh":
+          case "phần ảnh":
+          case "minh giáo dame":
+          case "minh giao dame":
+          case "minh giáo dps":
+          case "minh giao dps":
             cmd = "焚影圣诀";
             break;
-          case ("minh tôn lưu ly thể" ||
-            "minh ton luu ly the" ||
-            "minh tôn" ||
-            "minh ton" ||
-            "minh giáo tank" ||
-            "minh giao tank"):
+          case "minh tôn lưu ly thể":
+          case "minh ton luu ly the":
+          case "minh tôn":
+          case "minh ton":
+          case "minh giáo tank":
+          case "minh giao tank":
             cmd = "明尊琉璃体";
             break;
-          case ("phân sơn kính" ||
-            "phan son kinh" ||
-            "thương vân dame" ||
-            "thuong van dame" ||
-            "thương vân dps" ||
-            "thuong van dps"):
+          case "phân sơn kính":
+          case "phan son kinh":
+          case "thương vân dame":
+          case "thuong van dame":
+          case "thương vân dps":
+          case "thuong van dps":
             cmd = "分山劲";
             break;
-          case ("thiết cốt y" ||
-            "thiet cot y" ||
-            "thương vân tank" ||
-            "thuong van tank"):
+          case "thiết cốt y":
+          case "thiet cot y":
+          case "thương vân tank":
+          case "thuong van tank":
             cmd = "铁骨衣";
             break;
-          case ("tử hà công" ||
-            "tu ha cong" ||
-            "tử hà" ||
-            "tu ha" ||
-            "thuần dương nội dame" ||
-            "thuan duong noi dame" ||
-            "thuần dương nội dps" ||
-            "thuan duong noi dps"):
+          case "tử hà công":
+          case "tu ha cong":
+          case "tử hà":
+          case "tu ha":
+          case "thuần dương nội dame":
+          case "thuan duong noi dame":
+          case "thuần dương nội dps":
+          case "thuan duong noi dps":
             cmd = "紫霞功";
             break;
-          case ("thái hư kiếm ý" ||
-            "thai hu kiem y" ||
-            "thái hư" ||
-            "thai hu" ||
-            "thuần dương ngoại dame" ||
-            "thuan duong ngoai dame" ||
-            "thuần dương ngoại dps" ||
-            "thuan duong ngoai dps"):
+          case "thái hư kiếm ý":
+          case "thai hu kiem y":
+          case "thái hư":
+          case "thai hu":
+          case "thuần dương ngoại dame":
+          case "thuan duong ngoai dame":
+          case "thuần dương ngoại dps":
+          case "thuan duong ngoai dps":
             cmd = "太虚剑意";
             break;
-          case ("thiên la ngụy đạo" ||
-            "thien la nguy dao" ||
-            "thiên la" ||
-            "thien la" ||
-            "đường môn nội dame" ||
-            "duong mon noi dame" ||
-            "đường môn nội dps" ||
-            "duong mon noi dps"):
+          case "thiên la ngụy đạo":
+          case "thien la nguy dao":
+          case "thiên la":
+          case "thien la":
+          case "đường môn nội dame":
+          case "duong mon noi dame":
+          case "đường môn nội dps":
+          case "duong mon noi dps":
             cmd = "天罗诡道";
             break;
-          case ("kinh vũ quyết" ||
-            "kinh vu quyet" ||
-            "kinh vũ" ||
-            "kinh vu" ||
-            "đường môn ngoại dame" ||
-            "duong mon ngoai dame" ||
-            "đường môn ngoại dps" ||
-            "duong mon ngoai dps"):
+          case "kinh vũ quyết":
+          case "kinh vu quyet":
+          case "kinh vũ":
+          case "kinh vu":
+          case "đường môn ngoại dame":
+          case "duong mon ngoai dame":
+          case "đường môn ngoại dps":
+          case "duong mon ngoai dps":
             cmd = "惊羽诀";
             break;
-          case ("vấn thủy quyết" ||
-            "van thuy quyet" ||
-            "vấn thủy" ||
-            "van thuy" ||
-            "tàng kiếm dame" ||
-            "tang kiem dame" ||
-            "tàng kiếm dps" ||
-            "tang kiem dps" ||
-            "tang kiem" ||
-            "tàng kiếm"):
+          case "vấn thủy quyết":
+          case "van thuy quyet":
+          case "vấn thủy":
+          case "van thuy":
+          case "tàng kiếm dame":
+          case "tang kiem dame":
+          case "tàng kiếm dps":
+          case "tang kiem dps":
+          case "tang kiem":
+          case "tàng kiếm":
             cmd = "问水诀";
             break;
-          case ("tiếu trần quyết" ||
-            "tieu tran quyet" ||
-            "cái bang dame" ||
-            "cai bang dame" ||
-            "cái bang dps" ||
-            "cai bang dps" ||
-            "cái bang" ||
-            "cai bang"):
+          case "tiếu trần quyết":
+          case "tieu tran quyet":
+          case "cái bang dame":
+          case "cai bang dame":
+          case "cái bang dps":
+          case "cai bang dps":
+          case "cái bang":
+          case "cai bang":
             cmd = "笑尘诀";
             break;
-          case ("bắc ngạo quyết" ||
-            "bac ngao quyet" ||
-            "bá đao" ||
-            "ba dao" ||
-            "bá đao dame" ||
-            "ba dao dame" ||
-            "bá đao dps" ||
-            "ba dao dps"):
+          case "bắc ngạo quyết":
+          case "bac ngao quyet":
+          case "bá đao":
+          case "ba dao":
+          case "bá đao dame":
+          case "ba dao dame":
+          case "bá đao dps":
+          case "ba dao dps":
             cmd = "北傲诀";
             break;
-          case ("lăng hải quyết" ||
-            "lang hai quyet" ||
-            "bồng lai" ||
-            "bong lai" ||
-            "bồng lai dame" ||
-            "bong lai dame" ||
-            "bồng lai dps" ||
-            "bong lai dps"):
+          case "lăng hải quyết":
+          case "lang hai quyet":
+          case "bồng lai":
+          case "bong lai":
+          case "bồng lai dame":
+          case "bong lai dame":
+          case "bồng lai dps":
+          case "bong lai dps":
             cmd = "凌海诀";
             break;
-          case ("ẩn long quyết" ||
-            "an long quyet" ||
-            "lăng tuyết các" ||
-            "lang tuyet cac" ||
-            "lăng tuyết" ||
-            "lang tuyet" ||
-            "lăng tuyết các dame" ||
-            "lang tuyet cac dame" ||
-            "lăng tuyết các dps" ||
-            "lang tuyet cac dps" ||
-            "lăng tuyết dame" ||
-            "lang tuyet dame" ||
-            "lăng tuyết dps" ||
-            "lang tuyet dps"):
+          case "ẩn long quyết":
+          case "an long quyet":
+          case "lăng tuyết các":
+          case "lang tuyet cac":
+          case "lăng tuyết":
+          case "lang tuyet":
+          case "lăng tuyết các dame":
+          case "lang tuyet cac dame":
+          case "lăng tuyết các dps":
+          case "lang tuyet cac dps":
+          case "lăng tuyết dame":
+          case "lang tuyet dame":
+          case "lăng tuyết dps":
+          case "lang tuyet dps":
             cmd = "隐龙诀";
             break;
-          case ("thái huyền kinh" ||
-            "thai huyen kinh" ||
-            "diễn thiên tông" ||
-            "dien thien tong" ||
-            "diễn thiên tông dame" ||
-            "dien thien tong dame" ||
-            "diễn thiên tông dps" ||
-            "dien thien tong dps"):
+          case "thái huyền kinh":
+          case "thai huyen kinh":
+          case "diễn thiên tông":
+          case "dien thien tong":
+          case "diễn thiên tông dame":
+          case "dien thien tong dame":
+          case "diễn thiên tông dps":
+          case "dien thien tong dps":
             cmd = "太玄经";
             break;
-          case ("cô phong quyết" ||
-            "co phong quyet" ||
-            "đao tông" ||
-            "dao tong" ||
-            "đao tông dps" ||
-            "dao tong dps" ||
-            "đao tông dame" ||
-            "dao tong dame"):
+          case "cô phong quyết":
+          case "co phong quyet":
+          case "đao tông":
+          case "dao tong":
+          case "đao tông dps":
+          case "dao tong dps":
+          case "đao tông dame":
+          case "dao tong dame":
             cmd = "孤锋诀";
             break;
           default:

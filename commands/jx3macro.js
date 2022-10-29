@@ -61,10 +61,10 @@ module.exports = {
     options: [
       {
         name: "jx3macro",
-        value: "Tên tâm pháp",
+        value: "Tên nội công của môn phái (tiếng việt/tiếng trung đều được)",
         type: 3,
         required: true,
-        description: "Nhập tên tâm pháp của phái",
+        description: "Nhập tên tâm pháp của phái. (Ví dụ: băng tâm, bang tam, thất tú dame, that tu dame, thất tú dps, that tu dps, .v..v..",
       },
     ],
     /**

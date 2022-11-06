@@ -356,7 +356,7 @@ module.exports = {
             interaction,
             `❌ | Không tìm thấy trang bị phù hợp`
           );
-
+            console.log(cmd);
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(

@@ -372,7 +372,7 @@ module.exports = {
               .addField("Nội công:", `${data.name}`, true)
               .addField("Đồ PVP:", `${data.pvp}`)
               .addField("Đồ PVE:", `${data.pve}`)
-              .setImage(`${data.pve}`);
+              .setImage(data.pve);
             interaction.send(embed);
           } catch (err) {
             console.error(err);

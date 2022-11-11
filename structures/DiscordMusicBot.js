@@ -204,7 +204,7 @@ class DiscordMusicBot extends Client {
         // );
         // msg.setColor(client.botconfig.EmbedColor);
         // msg.setDescription(` /help để được Hòi support nhiều hơn nhé!`);
-        this.channels.cache.get("493378277482954771").send(msg);
+        // this.channels.cache.get("493378277482954771").send(msg);
         if (channelId) {
           const channel = client.channels.cache.get(channelId);
           channel

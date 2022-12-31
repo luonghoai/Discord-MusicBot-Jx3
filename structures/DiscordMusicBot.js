@@ -206,32 +206,40 @@ class DiscordMusicBot extends Client {
         // msg.setDescription(` /help để được Hòi support nhiều hơn nhé!`);
         // this.channels.cache.get("493378277482954771").send(msg);
         if (channelId) {
-          const channel = client.channels.cache.get(channelId);
-          channel
-            .join()
-            .then((connection) => {
-              const dispatcher = connection.play(
-                discordTTS.getVoiceStream(
-                  `Hê Lô ${userName} `,
-                  {
-                    lang: "vi",
-                    slow: false,
-                  }
-                )
-              );
-              dispatcher.on("finish", () => {
-                channel.leave();
-              });
-            })
-            .then(() => {
-              let msg = new MessageEmbed();
-              msg.setAuthor(`Hế lô ${userName} xinh đẹp tuyệt dời!!!!`, client.botconfig.IconURL);
-              msg.setColor(client.botconfig.EmbedColor);
-              msg.setDescription(
-                ` /help để được Hòi support nhiều hơn nhé!`
-              );
-              this.channels.cache.get("493378277482954771").send(msg);
-            });
+          let msg = new MessageEmbed();
+          msg.setAuthor(
+            `Hế lô ${userName} xinh đẹp tuyệt dời!!!!`,
+            client.botconfig.IconURL
+          );
+          msg.setColor(client.botconfig.EmbedColor);
+          msg.setDescription(` /help để được Hòi support nhiều hơn nhé!`);
+          client.channels.cache.get(channelId).send(msg);
+          // const channel = client.channels.cache.get(channelId);
+          // channel
+          //   // .join()
+          //   // .then((connection) => {
+          //   //   const dispatcher = connection.play(
+          //   //     discordTTS.getVoiceStream(
+          //   //       `Hê Lô ${userName} `,
+          //   //       {
+          //   //         lang: "vi",
+          //   //         slow: false,
+          //   //       }
+          //   //     )
+          //   //   );
+          //   //   dispatcher.on("finish", () => {
+          //   //     channel.leave();
+          //   //   });
+          //   // })
+          //   .then(() => {
+          //     let msg = new MessageEmbed();
+          //     msg.setAuthor(`Hế lô ${userName} xinh đẹp tuyệt dời!!!!`, client.botconfig.IconURL);
+          //     msg.setColor(client.botconfig.EmbedColor);
+          //     msg.setDescription(
+          //       ` /help để được Hòi support nhiều hơn nhé!`
+          //     );
+          //     this.channels.cache.get("493378277482954771").send(msg);
+          //   });
         }
       }
     });

@@ -64,7 +64,8 @@ module.exports = {
         value: "Tên nội công của môn phái (tiếng việt/tiếng trung đều được)",
         type: 3,
         required: true,
-        description: "Nhập tên tâm pháp của phái. (Ví dụ: băng tâm, bang tam, thất tú dame, that tu dame, thất tú dps, that tu dps, .v..v..",
+        description:
+          "Nhập tên tâm pháp của phái. (Ví dụ: băng tâm, bang tam, thất tú dame, that tu dame, thất tú dps, that tu dps, .v..v..",
       },
     ],
     /**
@@ -365,11 +366,11 @@ module.exports = {
             );
             const macro = resp.data.data;
             let embed = new MessageEmbed()
-              .setAuthor(`Macro: ${args[0].value}`, client.botconfig.IconURL)
+              .setAuthor(`Macro: ${cmd}`, client.botconfig.IconURL)
               .setColor("GREEN")
               .addField("Macro:", `${macro.macro}`)
               .addField("Kì huyệt:", `${macro.qixue}`)
-              .setDescription(`Macro cho ${args[0].value} chỉ mang tính chất tham khảo`);
+              .setDescription(`Macro cho ${cmd} chỉ mang tính chất tham khảo`);
             interaction.send(embed);
           } catch (err) {
             console.error(err);

@@ -1,5 +1,4 @@
 const { MessageEmbed } = require("discord.js");
-const { TrackUtils } = require("erela.js");
 const axios = require("axios");
 
 module.exports = {

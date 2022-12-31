@@ -354,17 +354,16 @@ module.exports = {
           // code block
         }
 
-        let data = {
-          name: `${cmd}`,
-        };
-
         const sendPostRequest = async (interaction) => {
           try {
             const resp = await axios.post(
               "https://www.jx3api.com/data/school/macro",
-              data
+              {
+                name: `${cmd}`,
+              }
             );
             const macro = resp.data.data;
+            console.log(macro);
             let embed = new MessageEmbed()
               .setAuthor(`Macro: ${cmd}`, client.botconfig.IconURL)
               .setColor("GREEN")
